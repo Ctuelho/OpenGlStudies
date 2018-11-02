@@ -1,12 +1,10 @@
 ﻿  Application.cpp
-c:\cpp\opengl\openglfromscratch\dependencies\linmath\linmath.h(56): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\cpp\opengl\openglfromscratch\dependencies\linmath\linmath.h(57): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\cpp\opengl\openglfromscratch\dependencies\linmath\linmath.h(58): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\cpp\opengl\openglfromscratch\dependencies\linmath\linmath.h(336): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\cpp\opengl\openglfromscratch\openglfromscratch\src\application.cpp(85): warning C4101: 'vbo_cube_colors': unreferenced local variable
-c:\cpp\opengl\openglfromscratch\openglfromscratch\src\application.cpp(85): warning C4101: 'vbo_cube_vertices': unreferenced local variable
-c:\cpp\opengl\openglfromscratch\openglfromscratch\src\application.cpp(85): warning C4101: 'fragment_shader': unreferenced local variable
-c:\cpp\opengl\openglfromscratch\openglfromscratch\src\application.cpp(85): warning C4101: 'vertex_shader': unreferenced local variable
-  glad.c
-LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-  OpenGLFromScratch.vcxproj -> C:\CPP\OpenGL\OpenGLFromScratch\x64\Debug\OpenGLFromScratch.exe
+c:\cpp\opengl\openglstudies\openglfromscratch\dependencies\linmath\linmath.h(56): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\cpp\opengl\openglstudies\openglfromscratch\dependencies\linmath\linmath.h(57): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\cpp\opengl\openglstudies\openglfromscratch\dependencies\linmath\linmath.h(58): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\cpp\opengl\openglstudies\openglfromscratch\dependencies\linmath\linmath.h(336): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(87): warning C4101: 'vbo_cube_colors': unreferenced local variable
+c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(87): warning C4101: 'vbo_cube_vertices': unreferenced local variable
+c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(87): warning C4101: 'fragment_shader': unreferenced local variable
+c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(87): warning C4101: 'vertex_shader': unreferenced local variable
+  OpenGLFromScratch.vcxproj -> C:\CPP\OpenGL\OpenGlStudies\OpenGLFromScratch\x64\Debug\OpenGLFromScratch.exe

@@ -12,6 +12,8 @@
 #include "glm.hpp"
 #include "matrix_transform.hpp"
 
+#include "Geometry/G3DSimpleGeometry3D.h"
+
 
 static const float dist = 50.0f;
 
@@ -125,8 +127,10 @@ int main() {
 		exit(EXIT_FAILURE);
 	}*/
 
-	program = LoadShader("C:/CPP/OpenGL/OpenGLFromScratch/OpenGLFromScratch/src/shaders/phong.vertex",
-		"C:/CPP/OpenGL/OpenGLFromScratch/OpenGLFromScratch/src/shaders/phong.frag");
+	G3DSimpleGeometry3D cube = LoadG3DFile("C:/CPP/OpenGL/OpenGlStudies/OpenGLFromScratch/OpenGLFromScratch/src/models/cube.g3d");
+
+	program = LoadShader("C:/CPP/OpenGL/OpenGLStudies/OpenGLFromScratch/OpenGLFromScratch/src/shaders/phong.vertex",
+		"C:/CPP/OpenGL/OpenGLStudies/OpenGLFromScratch/OpenGLFromScratch/src/shaders/phong.frag");
 
 	glUseProgram(program);
 
@@ -143,7 +147,7 @@ int main() {
 
 	glBindBuffer(GL_ARRAY_BUFFER, vbo[0]);
 
-	glBufferData(GL_ARRAY_BUFFER, sizeof(cube_vertices), cube_vertices, GL_DYNAMIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, cube.mesh.Vertices.size(), &cube.mesh.Vertices[0], GL_DYNAMIC_DRAW);
 
 	glVertexAttribPointer(vpos_location, 3, GL_FLOAT, GL_FALSE, 0, 0);
 
@@ -151,7 +155,7 @@ int main() {
 
 	glBindBuffer(GL_ARRAY_BUFFER, vbo[1]);
 
-	glBufferData(GL_ARRAY_BUFFER, sizeof(cube_colors), cube_colors, GL_DYNAMIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, cube.mesh.UV.size(), &cube.mesh.UV[0], GL_DYNAMIC_DRAW);
 
 	glVertexAttribPointer(vcol_location, 3, GL_FLOAT, GL_FALSE, 0, 0);
 

@@ -57,6 +57,7 @@ G3DSimpleGeometry3D LoadG3DFile(const char *filePath) {
 				if (line[1] == 't')
 				{
 					std::vector<GLfloat> uv({ numbers[0], numbers[1], (GLfloat)0.0 });
+					//std::vector<GLfloat> uv({ 1, 1, (GLfloat)0.0 });
 					result.mesh.UV.insert(result.mesh.UV.end(), uv.begin(), uv.end());
 				}
 				else if (line[1] == 'n')

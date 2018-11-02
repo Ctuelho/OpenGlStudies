@@ -27,12 +27,18 @@
     <ClCompile Include="src\Geometry\G3DSimpleGeometry3D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\BMPLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ShaderCompiler.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Geometry\G3DSimpleGeometry3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BMPLoader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

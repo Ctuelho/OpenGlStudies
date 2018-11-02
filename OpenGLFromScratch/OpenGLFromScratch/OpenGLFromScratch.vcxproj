@@ -126,11 +126,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Application.cpp" />
+    <ClCompile Include="src\BMPLoader.cpp" />
     <ClCompile Include="src\Geometry\G3DSimpleGeometry3D.cpp" />
     <ClCompile Include="src\glad.c" />
     <ClCompile Include="src\ShaderCompiler.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\BMPLoader.h" />
     <ClInclude Include="src\Geometry\G3DSimpleGeometry3D.h" />
     <ClInclude Include="src\ShaderCompiler.hpp" />
   </ItemGroup>

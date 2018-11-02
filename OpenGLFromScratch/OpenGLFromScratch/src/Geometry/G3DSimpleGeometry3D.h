@@ -25,7 +25,7 @@ public:
 	std::vector<GLfloat> Vertices;
 	std::vector<GLfloat> Normals;
 	std::vector<GLfloat> UV;
-	std::vector<GLuint> Indices;
+	std::vector<GLushort> Indices;
 
 	G3DMesh3D();
 };

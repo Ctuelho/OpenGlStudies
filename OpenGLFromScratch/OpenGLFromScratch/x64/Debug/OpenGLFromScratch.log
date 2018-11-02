@@ -3,8 +3,10 @@ c:\cpp\opengl\openglstudies\openglfromscratch\dependencies\linmath\linmath.h(56)
 c:\cpp\opengl\openglstudies\openglfromscratch\dependencies\linmath\linmath.h(57): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 c:\cpp\opengl\openglstudies\openglfromscratch\dependencies\linmath\linmath.h(58): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 c:\cpp\opengl\openglstudies\openglfromscratch\dependencies\linmath\linmath.h(336): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(87): warning C4101: 'vbo_cube_colors': unreferenced local variable
-c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(87): warning C4101: 'vbo_cube_vertices': unreferenced local variable
-c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(87): warning C4101: 'fragment_shader': unreferenced local variable
-c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(87): warning C4101: 'vertex_shader': unreferenced local variable
+c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(180): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(46): warning C4101: 'vbo_cube_colors': unreferenced local variable
+c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(46): warning C4101: 'vbo_cube_vertices': unreferenced local variable
+c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(46): warning C4101: 'fragment_shader': unreferenced local variable
+c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(46): warning C4101: 'vertex_shader': unreferenced local variable
+c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(182): warning C4101: 'ModelRotation': unreferenced local variable
   OpenGLFromScratch.vcxproj -> C:\CPP\OpenGL\OpenGlStudies\OpenGLFromScratch\x64\Debug\OpenGLFromScratch.exe

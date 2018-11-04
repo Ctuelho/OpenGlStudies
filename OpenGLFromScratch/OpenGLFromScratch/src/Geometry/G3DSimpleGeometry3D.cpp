@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 
+
 G3DSimpleGeometry3D::G3DSimpleGeometry3D(void) 
 {
 	GLfloat identityTransform[] = {
@@ -17,16 +18,73 @@ G3DSimpleGeometry3D::G3DSimpleGeometry3D(void)
 		&identityTransform[sizeof(identityTransform) / sizeof(identityTransform[0])]);
 };
 
-//G3DVector3D::G3DVector3D() {
-//	this->X = this->Y = this->Z = GLfloat(0.0);
-//};
-//
-//G3DVector3D::G3DVector3D(GLfloat x, GLfloat y, GLfloat z)
-//{
-//	this->X = x;
-//	this->Y = y;
-//	this->Z = z;
-//};
+void G3DSimpleGeometry3D::AttachProgram(GLuint prog) {
+	program = prog;
+	GenBuffers();
+}
+
+void G3DSimpleGeometry3D::GenBuffers() {
+	
+	vlight_location = glGetUniformLocation(program, "LIGHT");
+	veye_location = glGetUniformLocation(program, "EYE");
+	mvp_location = glGetUniformLocation(program, "MVP");
+
+	vpos_location = glGetAttribLocation(program, "vPos");
+	vN_location = glGetAttribLocation(program, "vN");
+	vuv_location = glGetAttribLocation(program, "vUV");
+
+	glGenVertexArrays(1, &vao);
+
+	glBindVertexArray(vao);
+
+	glGenBuffers(3, vbo);
+
+	glGenBuffers(1, &ebo);
+
+	//positions
+	glBindBuffer(GL_ARRAY_BUFFER, vbo[0]);
+
+	glBufferData(GL_ARRAY_BUFFER, mesh.Vertices.size() * sizeof(GLfloat), &mesh.Vertices[0], GL_DYNAMIC_DRAW);
+
+
+	//normals
+	glBindBuffer(GL_ARRAY_BUFFER, vbo[1]);
+
+	glBufferData(GL_ARRAY_BUFFER, mesh.Normals.size() * sizeof(GLfloat), &mesh.Normals[0], GL_DYNAMIC_DRAW);
+
+	//uv
+	glBindBuffer(GL_ARRAY_BUFFER, vbo[2]);
+
+	glBufferData(GL_ARRAY_BUFFER, mesh.UV.size() * sizeof(GLfloat), &mesh.UV[0], GL_DYNAMIC_DRAW);
+	
+	//index
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, mesh.Indices.size() * sizeof(GLushort), &mesh.Indices[0], GL_DYNAMIC_DRAW);
+}
+
+void G3DSimpleGeometry3D::Render(glm::mat4 MVPmatrix, glm::uvec3 LIGHT, glm::uvec3 EYE) {
+	
+	glUseProgram(program);
+
+	glBindBuffer(GL_ARRAY_BUFFER, vbo[0]);
+	glVertexAttribPointer(vpos_location, 3, GL_FLOAT, GL_FALSE, 0, 0);
+	glEnableVertexAttribArray(vpos_location);
+	glBindBuffer(GL_ARRAY_BUFFER, vbo[1]);
+	glVertexAttribPointer(vN_location, 3, GL_FLOAT, GL_FALSE, 0, 0);
+	glEnableVertexAttribArray(vN_location);
+	glBindBuffer(GL_ARRAY_BUFFER, vbo[2]);
+	glVertexAttribPointer(vuv_location, 2, GL_FLOAT, GL_FALSE, 0, 0);
+	glEnableVertexAttribArray(vuv_location);
+
+	glUniform3f(vlight_location, LIGHT[0], LIGHT[1], LIGHT[2]);
+	glUniform3f(veye_location, EYE[0], EYE[1], EYE[2]);
+	glUniformMatrix4fv(mvp_location, 1, GL_FALSE, &MVPmatrix[0][0]);
+
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
+	int size;
+	glGetBufferParameteriv(GL_ELEMENT_ARRAY_BUFFER, GL_BUFFER_SIZE, &size);
+	glDrawElements(GL_TRIANGLES, size / sizeof(GLushort), GL_UNSIGNED_SHORT, 0);
+}
 
 G3DMesh3D::G3DMesh3D(void) {};
 

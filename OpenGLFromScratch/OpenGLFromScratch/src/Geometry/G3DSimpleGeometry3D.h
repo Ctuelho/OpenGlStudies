@@ -6,18 +6,11 @@
 
 #include <vector>
 
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
+#include "glm.hpp"
 
-//class G3DVector3D
-//{
-//public:
-//	GLfloat X, Y, Z;
-//
-//	G3DVector3D();
-//
-//	G3DVector3D(GLfloat x, GLfloat y, GLfloat z);
-//};
 
 class G3DMesh3D
 {
@@ -37,7 +30,14 @@ public:
 	G3DMesh3D mesh;
 	std::vector<std::vector<float> > Transform;
 
+	GLuint program;
+	GLuint vao, vbo[3], ebo;
+	GLint mvp_location, vpos_location, vuv_location, vN_location, veye_location, vlight_location;
+
 	G3DSimpleGeometry3D();
+	void AttachProgram(GLuint prog);
+	void GenBuffers();
+	void Render(glm::mat4 MVPmatrix, glm::uvec3 LIGHT, glm::uvec3 EYE);
 
 };
 

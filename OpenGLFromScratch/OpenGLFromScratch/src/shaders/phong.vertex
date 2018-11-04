@@ -4,10 +4,10 @@ uniform vec3 LIGHT;
 uniform vec3 EYE;
 uniform mat4 MVP;
 attribute vec3 vPos;
-attribute vec3 vCol;
 attribute vec2 vUV;
 attribute vec3 vN;
 varying vec2 uv;
+varying float diffuse;
 
 void main()
 {
@@ -15,5 +15,7 @@ void main()
 
 	uv = vUV;
 
-	float lighting = max(0, dot(vN, LIGHT));
+	float _diffuse = max(0, dot(normalize(LIGHT), normalize(vN)));
+	diffuse = _diffuse;
+
 };

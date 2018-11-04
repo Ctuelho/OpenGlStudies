@@ -3,10 +3,14 @@ c:\cpp\opengl\openglstudies\openglfromscratch\dependencies\linmath\linmath.h(56)
 c:\cpp\opengl\openglstudies\openglfromscratch\dependencies\linmath\linmath.h(57): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 c:\cpp\opengl\openglstudies\openglfromscratch\dependencies\linmath\linmath.h(58): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 c:\cpp\opengl\openglstudies\openglfromscratch\dependencies\linmath\linmath.h(336): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(180): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(46): warning C4101: 'vbo_cube_colors': unreferenced local variable
-c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(46): warning C4101: 'vbo_cube_vertices': unreferenced local variable
-c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(46): warning C4101: 'fragment_shader': unreferenced local variable
-c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(46): warning C4101: 'vertex_shader': unreferenced local variable
-c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(182): warning C4101: 'ModelRotation': unreferenced local variable
+c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(46): warning C4101: 'vlight_location': unreferenced local variable
+c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(45): warning C4101: 'simpleWater_fragment_shader': unreferenced local variable
+c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(46): warning C4101: 'vpos_location': unreferenced local variable
+c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(46): warning C4101: 'vN_location': unreferenced local variable
+c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(44): warning C4101: 'fragment_shader': unreferenced local variable
+c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(44): warning C4101: 'vertex_shader': unreferenced local variable
+c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(46): warning C4101: 'mvp_location': unreferenced local variable
+c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(46): warning C4101: 'veye_location': unreferenced local variable
+c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(46): warning C4101: 'vuv_location': unreferenced local variable
+c:\cpp\opengl\openglstudies\openglfromscratch\openglfromscratch\src\application.cpp(45): warning C4101: 'simpleWater_vertex_shader': unreferenced local variable
   OpenGLFromScratch.vcxproj -> C:\CPP\OpenGL\OpenGlStudies\OpenGLFromScratch\x64\Debug\OpenGLFromScratch.exe

@@ -45,5 +45,7 @@
   <ItemGroup>
     <None Include="src\shaders\phong.vertex" />
     <None Include="src\shaders\phong.frag" />
+    <None Include="src\shaders\simpleWater.vertex" />
+    <None Include="src\shaders\simpleWater.frag" />
   </ItemGroup>
 </Project>
